@@ -11,6 +11,11 @@ const initialState = [
         id: '1',
         title: "Call dentist",
         done: true,
+    },
+    {
+        id: '2',
+        title: "Walk the dog",
+        done: false,
     }
 ]
 

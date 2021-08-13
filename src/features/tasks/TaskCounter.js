@@ -9,7 +9,7 @@ export const TaskCounter = () => {
 
     return (
         <div className={"task-counter-container flex-center h2"}>
-            <span className={"title"}>Task to do : <span className={"second-title"}>{tasksToDo.length}</span></span>
+            <span className={"title"}>Tasks to do : <span className={"second-title"}>{tasksToDo.length}</span></span>
         </div>
 
     )
