@@ -24,6 +24,14 @@ const tasksSlice = createSlice({
     initialState,
     reducers: {
 
+        taskToggled(state, action) {
+            const {id, done} = action.payload
+            const existingTask = state.find(task => task.id === id)
+            if (existingTask) {
+                existingTask.done = done
+            }
+        },
+
         taskAdded: {
             reducer(state, action) {
                 state.push(action.payload)
@@ -37,15 +45,7 @@ const tasksSlice = createSlice({
                     }
                 }
             }
-        },
-
-        taskToggled(state, action) {
-            const {id, done} = action.payload
-            const existingTask = state.find(task => task.id === id)
-            if (existingTask) {
-                existingTask.done = done
-            }
-        },
+        }
     }
 })
 
